@@ -1,10 +1,11 @@
-def combos(n, m = 1):
-    if n < m:return []
+def combos(n, m=1):
+    if n < m:
+        return []
     res = [[n]]
     for i in range(m, n):
         l = [i]
         for j in combos(n - i, i):
-           res += [l + j]
+            res += [l + j]
     return res
 
 

@@ -18,6 +18,7 @@ def solution(a):
     return(max(a) * a_len)
 """
 
+
 def solution(a):
     st = set(a)
     while min(st) != max(st):
@@ -31,11 +32,10 @@ def solution(a):
                 mx = mx - num
         if mx != mn:
             st.add(mx)
-    return st.pop()*len(a)
+    return st.pop() * len(a)
+
 
 if __name__ == "__main__":
-    assert(solution([9]) == 9)
-    assert(solution([6, 9, 21]) == 9)
-    assert(solution([1, 21, 55]) == 3)
-
-
+    assert solution([9]) == 9
+    assert solution([6, 9, 21]) == 9
+    assert solution([1, 21, 55]) == 3
